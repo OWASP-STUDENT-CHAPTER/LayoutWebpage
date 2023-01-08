@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+
+<style>
+    script{
+        display: block !important;
+    }
+    body{
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+    .mainframe{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background: url('./LayoutBg.png');
+        height: 100vh;
+        z-index: -1;
+        position: relative;
+    }
+    .mainframe-logo{
+        width: 58%;
+        position: absolute;
+        top: 40%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+    }
+    .mainframe-btn{
+        position: absolute;
+        top: 82%;
+        left: 67%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+
+    @media screen and (max-width: 1025px){
+        .mainframe{
+            background: url('./LayoutBg2.png');
+            background-size: cover;
+        }
+        .mainframe-logo{
+            width: 100%;
+            top: 40%;
+            left: 50%;
+        }
+        .mainframe-btn{
+            top: 80%;
+            left: 50%;
+        }
+    }
+</style>
+
+<body>
+    <div class="mainframe">
+        <img src="./LogoFinal.png" class="mainframe-logo">
+        <div class="mainframe-btn">
+            <div class="apply-button" data-hackathon-slug="layout" data-button-theme="dark-inverted" style="height: 44px; width: 312px">
+            </div>
+        </div>
+    </div>
+
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+</body>
+</html>
